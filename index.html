@@ -4,11 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="companyCss.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>My Company</title>
 </head>
 
 <body>
-    <h1>Hallo Dunia ke 4</h1>
+    <div class="contener">
+        <div class="nav">
+            <ul>
+                <li class="icons"><a href="">My Company</a></li>
+                <div class="burger">
+                    <li class="extra2"><a href="">Sign in</a></li>
+                    <li class="extra"><a href="">Contact</a></li>
+                    <li class="floatLeft active"><a class="active" href="">Home</a></li>
+                </div>
+            </ul>
+        </div>
+        <p id="demo">
+        <h3>HEllo</h3>
+        </p>
+        <div class="banner">
+            <img class="slides" src="img/m1.jpg" alt="">
+            <img class="slides" src="img/m2.jpg" alt="">
+            <img class="slides" src="img/m3.jpg" alt="">
+            <img class="slides" src="img/m4.jpg" alt="">
+
+        </div>
+        <div class="main">
+            <div class="satu">
+                <h3>Our Product & Service</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Live Support</a></li>
+                </ul>
+            </div>
+            <div class="dua">
+                <h3>Connect with us</h3>
+                <a href="">Contact us</a><br>
+                <i class="fas fa-phone-alt tlp">+62 00000 00000</i><br>
+                <i class="fas fa-envelope mail"><a href="">devcamp@gmail.com</a></i>
+            </div>
+            <div class="tiga">
+                <h3>Devcamp Learning Center</h3>
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ut illum similique voluptate vel
+                    sunt voluptatum reiciendis earum voluptatem quisquam."</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright @ Devcamp 2020</p>
+            <p class="kanan">Powered by <strong>Devcamp</strong> </p>
+        </div>
+    </div>
+    <script>
+        var indexFoto = 0;
+        carosel();
+
+
+        function carosel() {
+            var i;
+            var x = document.getElementsByClassName("slides");
+
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            indexFoto++;
+            if (indexFoto > x.length) {
+                indexFoto = 1;
+            }
+            x[indexFoto - 1].style.display = "block";
+            setTimeout(carosel, 3000);
+        }
+    </script>
 </body>
 
 </html>
